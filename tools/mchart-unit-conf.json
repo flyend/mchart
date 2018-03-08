@@ -1,0 +1,42 @@
+[
+    {
+        "moduleName": "Animation",
+        "src": "src/lib/animation.src.js"
+    },
+    {
+        "moduleName": "Text",
+        "src": "src/lib/text.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/map/js/map.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/line/js/line.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/column/js/column.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/funnel/js/funnel.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/pie/js/pie.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/venn/js/venn.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/heatmap/js/heatmap.src.js"
+    },
+    {
+        "moduleName": "Graph",
+        "src": "src/scatter/js/scatter.src.js"
+    }
+]

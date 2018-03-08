@@ -1,0 +1,22 @@
+{
+	"strict": true,
+	"globalstrict": true,
+	"expr": true,
+	"undef": false,
+	"unused": true,
+	"browser": true,
+	"browserify": true,
+	"dojo": true,
+	"devel": true,
+	"boss": true,
+	"noarg": false,
+	"laxbreak": true,
+	"sub": true,
+	"supernew": true,
+	"validthis": true,
+	"globals": {
+		"Path2D": true,
+		"Graph": true,
+		"$": true
+	}
+}

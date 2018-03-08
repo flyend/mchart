@@ -1,0 +1,107 @@
+{
+    "global": {
+        "root": "./",
+        "cacheDir": ".cache",
+        "debug": false,
+        "rewriteRules": [
+            "^/((bar|column|funnel|heatmap|line|map|node|pie|radar|scatter|venn)/?(?:index.js|index.html)?)$ /demo/chart/$1"
+        ]
+    },
+    "task": {
+        "server": {
+            "port": 3012,
+            "fallback": "./index.html"
+        },
+        "mchart": {
+            "src": {
+                "entriesJs": ["src/mchart.src.js"],
+                "html": "demo/chart/*/index.html"
+            },
+            "dest": {
+                "jsPath": "dist",
+                "jsFile": "mchart.js"
+            },
+            "reload": {
+                "target": ["demo/chart/*/index.html"]
+            },
+            "moduleName": "Graph"
+        },
+        "mchartbuild": {
+            "src": {
+                "entriesJs": ["src/mchart.src.js"],
+                "html": "src/index.html"
+            },
+            "dest": {
+                "jsPath": "build",
+                "jsFile": "mchart.js"
+            },
+            "reload": {
+                "target": ["src/index.html"]
+            },
+            "moduleName": "Graph"
+        },
+        "mchartunit": {
+            "src": {
+                "entriesJs": "src/**/*.src.js",
+                "ignoreJs": "mchart.src.js",
+                "html": "src/*/index.html"
+            },
+            "reload": {
+                "target": ["src/*/index.html"]
+            },
+            "modulePrefix": ""
+        },
+        "chartindex": {
+            "src": {
+                "entriesJs": ["src/*/index.js"],
+                "html": "src/*/index.html"
+            },
+            "reload": {
+                "target": ["src/*/index.html"]
+            }
+        },
+        "less": {
+            "watch": "src/**/*.less",
+            "src": "src/demo/style/less/**/*.less",
+            "dest": "src/demo/style/css",
+            "reload": {
+                "target": ["src/index.html"]
+            }
+        },
+        "demochart": {
+            "src": {
+                "entriesJs": ["src/demo/js/chart-index.js"]
+            },
+            "dest": {
+                "jsFile": "chart-bundle.js",
+                "jsPath": "src/demo"
+            },
+            "reload": {
+                "target": ["src/demo/index.html"]
+            }
+        },
+        "demo": {
+            "src": {
+                "entriesJs": ["src/demo/js/index.js"],
+                "html": "src/demo/*.html"
+            },
+            "dest": {
+                "jsFile": "bundle.js",
+                "jsPath": "src/demo"
+            },
+            "reload": {
+                "target": ["src/demo/index.html"]
+            }
+        },
+        "gallery": {
+            "src": {
+                "js": ["src/demo/gallery/**/*.js", "!src/**/bundle.js"],
+                "entriesJs": "src/demo/gallery/**/index.js",
+                "html": "src/demo/gallery/**/*.html"
+            },
+            "dest": {
+                "jsFile": "bundle.js"
+            }
+        }
+    }
+}
